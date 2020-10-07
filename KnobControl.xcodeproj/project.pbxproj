@@ -10,6 +10,10 @@
 		B3125082252DA3140019ED46 /* KnobControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3125078252DA3140019ED46 /* KnobControl.framework */; };
 		B3125087252DA3150019ED46 /* KnobControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3125086252DA3150019ED46 /* KnobControlTests.swift */; };
 		B3125089252DA3150019ED46 /* KnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B312507B252DA3140019ED46 /* KnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3125093252DA3A50019ED46 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3125092252DA3A50019ED46 /* Knob.swift */; };
+		B3125095252DA43C0019ED46 /* KnobRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3125094252DA43C0019ED46 /* KnobRenderer.swift */; };
+		B3125097252DA4520019ED46 /* RotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3125096252DA4520019ED46 /* RotationGestureRecognizer.swift */; };
+		B31250B0252DB6270019ED46 /* KnobControl.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B31250AF252DB6270019ED46 /* KnobControl.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		B3125081252DA3140019ED46 /* KnobControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnobControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3125086252DA3150019ED46 /* KnobControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobControlTests.swift; sourceTree = "<group>"; };
 		B3125088252DA3150019ED46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3125092252DA3A50019ED46 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		B3125094252DA43C0019ED46 /* KnobRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobRenderer.swift; sourceTree = "<group>"; };
+		B3125096252DA4520019ED46 /* RotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureRecognizer.swift; sourceTree = "<group>"; };
+		B31250AF252DB6270019ED46 /* KnobControl.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KnobControl.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 		B312506E252DA3130019ED46 = {
 			isa = PBXGroup;
 			children = (
+				B31250AF252DB6270019ED46 /* KnobControl.podspec */,
 				B312507A252DA3140019ED46 /* KnobControl */,
 				B3125085252DA3150019ED46 /* KnobControlTests */,
 				B3125079252DA3140019ED46 /* Products */,
@@ -71,6 +80,9 @@
 		B312507A252DA3140019ED46 /* KnobControl */ = {
 			isa = PBXGroup;
 			children = (
+				B3125092252DA3A50019ED46 /* Knob.swift */,
+				B3125096252DA4520019ED46 /* RotationGestureRecognizer.swift */,
+				B3125094252DA43C0019ED46 /* KnobRenderer.swift */,
 				B312507B252DA3140019ED46 /* KnobControl.h */,
 				B312507C252DA3140019ED46 /* Info.plist */,
 			);
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					B3125077252DA3140019ED46 = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1170;
 					};
 					B3125080252DA3140019ED46 = {
 						CreatedOnToolsVersion = 11.7;
@@ -178,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31250B0252DB6270019ED46 /* KnobControl.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3125095252DA43C0019ED46 /* KnobRenderer.swift in Sources */,
+				B3125097252DA4520019ED46 /* RotationGestureRecognizer.swift in Sources */,
+				B3125093252DA3A50019ED46 /* Knob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -268,10 +286,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -284,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -325,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,6 +359,8 @@
 		B312508D252DA3150019ED46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dayan.KnobControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +385,8 @@
 		B312508E252DA3150019ED46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +410,7 @@
 		B3125090252DA3150019ED46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KnobControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +428,7 @@
 		B3125091252DA3150019ED46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KnobControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
